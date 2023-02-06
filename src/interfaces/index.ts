@@ -1,8 +1,7 @@
-
 export interface UrlInfoType {
   long_url: string;
   link: string;
-  id: string
+  id: string;
 }
 
 export interface formPropsType {
