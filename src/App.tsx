@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import Allurls from './pages/AllUrls';
 import Decode from './pages/DecodeUrls';
 import Encode from './pages/EncodeUrls';
+
 function App() {
   return (
     <BrowserRouter>

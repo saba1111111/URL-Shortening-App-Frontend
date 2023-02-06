@@ -7,10 +7,15 @@ function Allurls() {
   const [allUrls, setAllUrls] = useState<UrlInfoType[]>([]);
 
   useEffect(() => {
-    axios
-      .get('http://localhost:4000/allUrls')
-      .then((datas) => setAllUrls(datas.data.urls))
-      .catch((err) => console.log(err));
+    const getUrls = async () => {
+      try {
+        const allUrls = await axios.get('http://localhost:4000/allUrls');
+        setAllUrls(allUrls.data.urls);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getUrls();
   }, []);
 
   return (
